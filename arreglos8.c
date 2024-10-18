@@ -35,4 +35,3 @@ int suma2(int **a, int f, int c) {
     return r;
 }
 
-}
