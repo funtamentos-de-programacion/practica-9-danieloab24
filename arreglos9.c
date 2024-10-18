@@ -6,29 +6,29 @@ int main() {
     int C[2][2] = {0};  // Matriz resultante
 
     int *ptrA, *ptrB, *ptrC;
-    ptrA= &A [0][0];
-    ptrB= &B [0][0];
-    ptrC= &C [0][0];
-    
+    ptrA = &A[0][0];
+    ptrB = &B[0][0];
+    ptrC = &C[0][0];
+
     // Multiplicación de matrices usando punteros
     for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 2; j++) {
             for (int k = 0; k < 2; k++) {
-                // TODO: Realiza las operaciones solo usando apuntadores
-                *(ptrC+i*)
+                // Realiza las operaciones solo usando apuntadores
+                *(ptrC+i*2+j) += (*(ptrA+i*2+k)) * (*(ptrB+k*2+j));
             }
         }
     }
-    
-    // Mostrar matriz resultante
-    for (int i = 0; i < 2; i++) {
-        printf("%d\t", arr[A][B][C]);
-        
 
-            // TODO: Imprime los elementos de la matriz resultante, usando apuantadores
+    // Mostrar matriz resultante
+    printf("Matriz resultante C:\n");
+    for (int i = 0; i < 2; i++) {
+        for (int j=0; j<2; j++) {
+            // Imprime los elementos de la matriz resultante, usando apuntadores
+            printf("%d\t", *(ptrC+i*2+j));
         }
-        
+        printf("\n");
     }
-    
+
     return 0;
 }
